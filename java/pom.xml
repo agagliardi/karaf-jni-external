@@ -94,7 +94,7 @@
 					<instructions>
 						<Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>*</Import-Package>
-						<Bundle-NativeCode>libExternalFunction.so;osname=linux;processor=x86-64;libHelloWorld.so;osname=linux;processor=x86-64</Bundle-NativeCode>
+						<Bundle-NativeCode>libExternalFunction.so;osname=linux;processor=x86-64;libHelloWorld.so;osname=linux;processor=x86-64;libambjni.so;osname=linux;processor=x86-64;libamb.so;osname=linux;processor=x86-64</Bundle-NativeCode>
 					</instructions>
 				</configuration>
 			</plugin>

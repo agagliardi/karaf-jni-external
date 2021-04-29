@@ -21,21 +21,25 @@ package com.rh.example;
 
 public class HelloWorld {
 
-
   public static native void displayMessage();
 
   static {
-    System.loadLibrary("HelloWorld");
+
+    try {
+      System.loadLibrary("ExternalFunction");
+    } catch (Error e) {
+      System.err.println(e.getMessage());
+    }
+
+    try {
+      System.loadLibrary("HelloWorld");
+    } catch (Error e) {
+      System.err.println(e.getMessage());
+    }
+
   }
 
   public void testNative() {
-    HelloWorld.displayMessage();
-  }
-
-  public static void main(String[] args) {
-
-    System.out.println("library: " + System.getProperty("java.library.path"));
-
     HelloWorld.displayMessage();
   }
 }

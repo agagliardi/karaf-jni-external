@@ -47,7 +47,6 @@ public class JNITest {
 
 
     public static void main(String[] args) {
-        //System.setProperty("java.library.path", JNITest.class.getResource("/").getFile());
         System.out.println("library: " + System.getProperty("java.library.path"));
         new HelloWorld().testNative();
     }
